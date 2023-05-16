@@ -3,7 +3,7 @@ name: Pre-Migration
 on:
 push:
 branches:
-- main # Modify this to match your branch name
+- main 
 
 jobs:
 check_repo_size:
@@ -11,7 +11,7 @@ runs-on: ubuntu-latest
 
 steps:
 - name: Check repository size
-- run: 
+run: |
 git gc --aggressive
 git count-objects -vH
 
