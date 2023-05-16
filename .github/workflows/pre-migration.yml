@@ -16,12 +16,12 @@ run: |
  git count-objects -vH
 
 check_file_size:
-runs-on: ubuntu-latest
+ runs-on: ubuntu-latest
 
-steps:
-- name: Checkout code
-uses: actions/checkout@v2
+ steps:
+ - name: Checkout code
+ uses: actions/checkout@v2
 
-- name: Check file size
-run: |
+  - name:Check file size
+    run:|
 find . -type f -size +100M -exec ls -lh {} \;
