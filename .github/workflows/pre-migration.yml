@@ -13,7 +13,6 @@ steps:
 - name: Check repository size
 run: |
 git gc --aggressive
-git count-objects -vH
 
 check_file_size:
 runs-on: ubuntu-latest
